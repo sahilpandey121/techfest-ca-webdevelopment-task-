@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Room Allocation</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            border-radius: 10px;
+        }
+        .btn-custom {
+            background-color: #343a40;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #495057;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center">Upload CSV Files for Room Allocation</h1>
+                <form method="post" enctype="multipart/form-data" class="mt-4">
+                    <div class="form-group">
+                        <label for="groups_file">Group CSV:</label>
+                        <input type="file" class="form-control-file" id="groups_file" name="groups_file" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hostels_file">Hostel CSV:</label>
+                        <input type="file" class="form-control-file" id="hostels_file" name="hostels_file" required>
+                    </div>
+                    <button type="submit" class="btn btn-custom btn-block">Upload and Allocate Rooms</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Allocation Results</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            border-radius: 10px;
+        }
+        .btn-custom {
+            background-color: #343a40;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #495057;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center">Allocation Results</h1>
+                <div class="table-responsive">
+                    {% for table in tables %}
+                        {{ table | safe }}
+                    {% endfor %}
+                </div>
+                <a href="/download_allocation" class="btn btn-custom btn-block mt-4">Download Allocation CSV</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
