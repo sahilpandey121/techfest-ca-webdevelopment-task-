@@ -67,7 +67,7 @@ def allocate_rooms(group_df, hostel_df):
     return allocation_df
 
 def find_suitable_hostel_room(group, hostel_df):
-    filtered_hostel_df = hostel_df[(hostel_df['Gender'] == group['Gender']) & (hostel_df['Capacity'] >= group['Members'])]
+    filtered_hostel_df = hostel_df[(hostel_df['Gender'] == group['Gender']) & (hostel_df['Capacity'] <= group['Members'])]
     filtered_hostel_df = filtered_hostel_df.sort_values(by='Capacity')
     return filtered_hostel_df.iloc[0] if not filtered_hostel_df.empty else None
 
